@@ -42,11 +42,38 @@
             position: relative;
             margin-top: 20px;
         }
+        .blurred-text {
+            filter: blur(8px);
+            transition: filter 0.3s;
+        }
+        .ip-container {
+            position: relative;
+            display: inline-block;
+        }
+        .hover-to-view {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .ip-container:hover .blurred-text {
+            filter: blur(0);
+        }
+        .ip-container:hover .hover-to-view {
+            opacity: 0;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
-    <h1>About</h1>
+    <h1>Browser information</h1>
     <div class="nav-buttons">
         <hr>
         <button onclick="location.href='index.html'">Home</button>
@@ -58,9 +85,11 @@
     <div class="content">
         <p id="browser-name"></p>
         <p id="browser-version"></p>
-        <p id="ip-address"></p>
+        <div class="ip-container">
+            <p id="ip-address" class="blurred-text"></p>
+            <div class="hover-to-view">Hover to view</div>
+        </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         console.log("Page JS loaded");
