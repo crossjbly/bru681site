@@ -134,7 +134,7 @@
             button.textContent = 'Light Mode';
         };
         function cloak() {
-            alert("close this tab");
+            alert("close this tab"); // (i have no idea how to do this automatically as this is website is an iframe itself so window.close doesn't work)
             var win = window.open();
             var url = "http://bru681.onrender.com/";
             if (url) {
@@ -146,7 +146,6 @@
                 iframe.src = url;
                 win.document.body.appendChild(iframe);
             }
-            window.close();
         }
         console.log("this site has 2 urls:");
         console.log("http://bru681.ftp.sh/");
