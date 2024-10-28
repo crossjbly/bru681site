@@ -33,6 +33,9 @@
             z-index: 999;
             margin-left: 10px;
         }
+        .link-button {
+            right: 150px; /* Position it further to the left */
+        }
         .toggle-button:hover, .link-button:hover {
             transform: scale(1.2);
         }
@@ -107,7 +110,7 @@
         <p style="font-size: xx-large;">:3</p>
     </div>
     <button class="toggle-button" onclick="toggleDarkMode()">Light Mode</button>
-    <button class="link-button" onclick="cloak();">Open Link</button>
+    <button class="link-button" onclick="cloak()">Cloak</button>
     <script>
         console.log("Page JS loaded");
         particlesJS.load('particles-js', 'particles.json', function() {
@@ -141,8 +144,8 @@
                 iframe.style.margin = "0";
                 iframe.src = url;
                 win.document.body.appendChild(iframe);
-    }
-}
+            }
+        }
         console.log("this site has 2 urls:");
         console.log("http://bru681.ftp.sh/");
         console.log("http://bru681.port0.org/");
