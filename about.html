@@ -52,10 +52,10 @@
         }
         .hover-to-view {
             position: absolute;
-            top: 50%;
+            top: 100%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.5);
+            transform: translate(-50%, 10px);
+            background-color: #777;
             color: white;
             padding: 5px;
             border-radius: 5px;
@@ -86,7 +86,7 @@
         <p id="browser-name"></p>
         <p id="browser-version"></p>
         <div class="ip-container">
-            <p id="ip-address" class="blurred-text"></p>
+            <p>IP Address: <span id="ip-address" class="blurred-text"></span></p>
             <div class="hover-to-view">Hover to view</div>
         </div>
     </div>
@@ -105,7 +105,7 @@
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('ip-address').textContent = "IP Address: " + data.ip;
+                document.getElementById('ip-address').textContent = data.ip;
             });
     </script>
 </body>
