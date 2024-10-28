@@ -50,22 +50,8 @@
             position: relative;
             display: inline-block;
         }
-        .hover-to-view {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -100%);
-            color: white;
-            padding: 5px;
-            pointer-events: none;
-            transition: opacity 0.3s;
-        }
         .ip-container:hover .blurred-text {
             filter: blur(0);
-        }
-        .ip-container:hover .hover-to-view {
-            opacity: 0;
-            pointer-events: none;
         }
     </style>
 </head>
@@ -84,7 +70,6 @@
         <p id="browser-name"></p>
         <p id="browser-version"></p>
         <div class="ip-container">
-            <div class="hover-to-view">Hover to view</div>
             <p>IP Address: <span id="ip-address" class="blurred-text"></span></p>
         </div>
     </div>
@@ -92,7 +77,7 @@
     <script>
         console.log("Page JS loaded");
         particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('particles.js loaded - callback');
+          console.log('particles.js loaded - callback');
         });
 
         // Display browser information
