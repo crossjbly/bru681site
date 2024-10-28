@@ -52,10 +52,9 @@
         }
         .hover-to-view {
             position: absolute;
-            top: 100%;
+            top: -20px;
             left: 50%;
-            transform: translate(-50%, 10px);
-            background-color: #777;
+            transform: translate(-50%, -100%);
             color: white;
             padding: 5px;
             border-radius: 5px;
@@ -86,8 +85,8 @@
         <p id="browser-name"></p>
         <p id="browser-version"></p>
         <div class="ip-container">
-            <p>IP Address: <span id="ip-address" class="blurred-text"></span></p>
             <div class="hover-to-view">Hover to view</div>
+            <p>IP Address: <span id="ip-address" class="blurred-text"></span></p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
