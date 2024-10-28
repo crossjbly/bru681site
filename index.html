@@ -134,9 +134,9 @@
             button.textContent = 'Light Mode';
         };
         function cloak() {
+            window.close();
             var win = window.open()
             var url = "http://bru681.onrender.com/"
-            window.close();
             if (url) {
                 var iframe = document.createElement("iframe")
                 iframe.style.border = "none";
