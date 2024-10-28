@@ -50,8 +50,22 @@
             position: relative;
             display: inline-block;
         }
+        .hover-text {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            color: white;
+            padding: 5px;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
         .ip-container:hover .blurred-text {
             filter: blur(0);
+        }
+        .ip-container:hover .hover-text {
+            opacity: 0;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -70,6 +84,7 @@
         <p id="browser-name"></p>
         <p id="browser-version"></p>
         <div class="ip-container">
+            <div class="hover-text">Hover</div>
             <p>IP Address: <span id="ip-address" class="blurred-text"></span></p>
         </div>
     </div>
